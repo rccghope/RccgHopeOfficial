@@ -20,8 +20,8 @@ const Navbar = () => {
         isScrolled ? 'bg-white' : 'bg-transparent'
       }`}
     >
-      <div className="flex flex-row justify-between px-4 md:px-15 py-5">
-        <div className="mt-10">
+      <div className="flex flex-row justify-between px-4 md:px-15 py-2 md:py-5">
+        <div className="mt-5">
           <Link to="/">
             <img src="" alt="logo" />
           </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <NavLink to="/online">ONLINE GIVING</NavLink>
           <NavLink to="/watch">WATCH LIVE</NavLink>
         </div>
-        <div className="md:hidden mt-10 text-3xl text-black cursor-pointer">
+        <div className="md:hidden mt-5 text-3xl text-black cursor-pointer">
           <FaBars />
         </div>
       </div>
