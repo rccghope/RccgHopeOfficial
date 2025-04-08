@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="mt-10">
           <Link to="/">
             {' '}
-            <img src="" alt="logoo" />
+            <img src="" alt="logo" />
           </Link>
         </div>
         <div className="flex-row gap-8 mt-10 font-bold hidden md:flex">
