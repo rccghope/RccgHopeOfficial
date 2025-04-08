@@ -6,10 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import hack1 from '../assets/hack1.jpg';
-import hack2 from '../assets/hack2.jpg';
-import hack3 from '../assets/hack3.jpg';
-
+import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
+import img3 from '../assets/img3.jpg';
 interface Slide {
   id: number;
   title: string;
@@ -26,7 +25,7 @@ const slides: Slide[] = [
     subtitle: 'HOUSE OF PRAYER',
     subtitle1: 'Where Faith, Community, and Love Meet.',
     subtitle2: '    Join us this beautiful journey of spiritual growth.',
-    image: hack1,
+    image: img1,
   },
   {
     id: 2,
@@ -34,7 +33,7 @@ const slides: Slide[] = [
     subtitle: 'HOUSE OF PRAYER',
     subtitle1: 'Where Faith, Community, and Love Meet.',
     subtitle2: '    Join us this beautiful journey of spiritual growth.',
-    image: hack2,
+    image: img2,
   },
   {
     id: 3,
@@ -42,7 +41,7 @@ const slides: Slide[] = [
     subtitle: 'HOUSE OF PRAYER',
     subtitle1: 'Where Faith, Community, and Love Meet.',
     subtitle2: '    Join us this beautiful journey of spiritual growth.',
-    image: hack3,
+    image: img3,
   },
 ];
 
@@ -54,7 +53,7 @@ const Slider: FC = () => {
         spaceBetween={0}
         slidesPerView={1}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
-        className="h-full"
+        className="relative w-full h-full"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="relative w-full h-full">
@@ -63,7 +62,8 @@ const Slider: FC = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-red-400 bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-6">
+            <div className="absolute inset-0 z-10"></div>
+            <div className="absolute inset-10 z-20 bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-6">
               <h1 className="text-4xl md:text-6xl font-bold">{slide.title}</h1>
               <h1 className="text-4xl md:text-6xl font-bold mt-2">
                 {slide.subtitle}
@@ -83,6 +83,7 @@ const Slider: FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+     
     </div>
   );
 };
