@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa6';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,16 +23,15 @@ const Navbar = () => {
       <div className="flex flex-row justify-between px-4 md:px-15 py-5">
         <div className="mt-10">
           <Link to="/">
-            {' '}
             <img src="" alt="logo" />
           </Link>
         </div>
         <div className="flex-row gap-8 mt-10 font-bold hidden md:flex">
           <NavLink to="/">HOME</NavLink>
-          <NavLink to="aboutus">ABOUT US</NavLink>
-          <NavLink to="contact">CONTACT US</NavLink>
-          <NavLink to="Online">ONLINE GIVING</NavLink>
-          <NavLink to="watch">WATCH LIVE</NavLink>
+          <NavLink to="/aboutus">ABOUT US</NavLink>
+          <NavLink to="/contact">CONTACT US</NavLink>
+          <NavLink to="/online">ONLINE GIVING</NavLink>
+          <NavLink to="/watch">WATCH LIVE</NavLink>
         </div>
         <div className="md:hidden mt-10 text-3xl text-black cursor-pointer">
           <FaBars />

@@ -70,7 +70,7 @@ const Slider: FC = () => {
               </h1>
               <p className=" md:text-2xl mt-4">{slide.subtitle1}</p>
               <p className=" md:text-2xl ">{slide.subtitle2}</p>
-              <div className='flex flex-row md:flex-row gap-2 mt-6'>
+              <div className="flex flex-row md:flex-row gap-2 mt-6">
                 {' '}
                 <button className="mt-6 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
                   Join Live
