@@ -1,4 +1,11 @@
-## Project Dependencies
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# run dependencies
+npm run dev
 
 These are the runtime dependencies of the project:
 
