@@ -1,7 +1,12 @@
+import ContactBanner from '../components/ContactBanner';
+import ContactForm from '../components/ContactForm';
+
 const ContactUs = () => {
   return (
-    <div className=" px-4 md:px-20">
-      <h1>Contact Us</h1>
+    <div>
+      <ContactBanner />
+      <ContactForm />
+      <div className=" px-4 md:px-20"></div>
     </div>
   );
 };
