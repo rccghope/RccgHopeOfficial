@@ -5,6 +5,7 @@ import ContactUs from '../Pages/ContactUs';
 import AboutUs from '../Pages/AboutUs';
 import OnlineGiving from '../Pages/OnlineGiving';
 import WatchLive from '../Pages/WatchLive';
+import BankTransfer from '../Pages/BankTransfer';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: 'aboutus', element: <AboutUs /> },
       { path: 'Online', element: <OnlineGiving /> },
       { path: 'watch', element: <WatchLive /> },
+      { path: '/online/bankTransfer', element: <BankTransfer /> },
     ],
   },
 ]);
