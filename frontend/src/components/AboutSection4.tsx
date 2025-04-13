@@ -3,7 +3,7 @@ import img6 from '../assets/img6.jpg';
 
 const AboutSection4 = () => {
     return (
-        <div className="w-screen p-20 mb-80">
+        <div className="w-screen p-20 mb-55">
 
             {/* Our Belief section */}
            <div className="relative h-[500px] w-full" >
@@ -16,7 +16,10 @@ const AboutSection4 = () => {
             </div>
             <br />
            </div>
+           <br />
+           <br />
         </div>
+        
     )
 }
 

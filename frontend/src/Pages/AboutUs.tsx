@@ -8,6 +8,7 @@ import AboutSection3Skeleton from '../LazyLoad/AboutSection3Skeleton';
 import AboutSection4Skeleton from '../LazyLoad/AboutSection4Skeleton';
 import AboutSection5Skeleton from '../LazyLoad/AboutSection5Skeleton';
 import AboutSection6Skeleton from '../LazyLoad/AboutSection6Skeleton';
+import AboutSection7Skeleton from '../LazyLoad/AboutSection7Skeleton';
 
 const AboutBanner = React.lazy(() => import('../components/AboutBanner'));
 const AboutSection1 = React.lazy(() => import('../components/AboutSection1'));
@@ -16,6 +17,7 @@ const AboutSection3 = React.lazy(() => import('../components/AboutSection3'));
 const AboutSection4 = React.lazy(() => import('../components/AboutSection4'));
 const AboutSection5 = React.lazy(() => import('../components/AboutSection5'));
 const AboutSection6 = React.lazy(() => import('../components/AboutSection6'));
+const AboutSection7 = React.lazy(() => import('../components/AboutSection7'));
 
 const AboutUs = () => {
   return (
@@ -61,6 +63,10 @@ const AboutUs = () => {
             <AboutSection4 />
           </Suspense>
         </ErrorBoundary>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
       
       <div className="">
@@ -77,6 +83,14 @@ const AboutUs = () => {
           {' '}
           <Suspense fallback={<AboutSection6Skeleton />}>
             <AboutSection6 />
+          </Suspense>
+        </ErrorBoundary>
+      </div>
+      <div className="">
+        <ErrorBoundary>
+          {' '}
+          <Suspense fallback={<AboutSection7Skeleton />}>
+            <AboutSection7 />
           </Suspense>
         </ErrorBoundary>
       </div>

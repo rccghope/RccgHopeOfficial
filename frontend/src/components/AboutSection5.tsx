@@ -3,7 +3,7 @@ import img6 from '../assets/img6.jpg';
 
 const AboutSection5 = () => {
     return (
-        <div className="w-screen p-20 mb-80 mx-auto max-w-7xl py-12">
+        <div className="w-screen p-20 mb-5 mx-auto max-w-7xl py-12 mt-40">
 
             {/* Leadership section */}
             <h2 className="text-3xl font-bold text-center mb-6">Meet our Leaders</h2>
