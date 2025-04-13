@@ -16,7 +16,7 @@ const AboutSection3 = () => {
                 </div>
 
                 <div className="">
-                    <h4 className="font-bold">OUR MISSION</h4>
+                    <h4 className="font-bold">OUR VISION</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt quis quos necessitatibus odio obcaecati eos dolore sequi nihil iusto illum.</p> <br />
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt quis quos necessitatibus odio obcaecati eos dolore sequi nihil iusto illum.</p> <br />
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt quis quos necessitatibus odio obcaecati eos dolore sequi nihil iusto illum.</p> <br />
