@@ -8,10 +8,17 @@ const AboutSection5Skeleton = () => {
             {/* Left-text right-image section */}
             <div className="h-64 grid grid-rows-3 grid-flow gap-4">
                 <div className="">
-                    <h4></h4>
-                    <p></p> <br />
-                    <p></p> <br />
-                    <p></p> <br />
+                    <h2></h2>
+                    <p></p>
+                   <div>
+                    <img src="" alt="" />
+                   </div>
+                    <img src="" alt="" />
+                    <img src="" alt="" />
+                    <img src="" alt="" />
+                    <img src="" alt="" />
+                    <img src="" alt="" />
+                    <img src="" alt="" />
                 </div>
                 <div>
                     
