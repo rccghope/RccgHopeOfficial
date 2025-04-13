@@ -8,6 +8,7 @@
     "vitest": "^3.1.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "react-loading-skeleton": "^3.5.0"
   }
 }

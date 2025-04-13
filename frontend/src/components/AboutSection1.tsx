@@ -1,9 +1,6 @@
-import img6 from '../assets/img6.jpg';
-
-
 const AboutSection1 = () => {
     return (
-        <div>
+        <div className="px-4 md:px-20">
             {/*Little text after about us banner */}
             <div className="flex justify-center items-center text-bold mt-7 w-auto">
                 {' '}
