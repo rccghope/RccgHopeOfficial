@@ -1,33 +1,20 @@
-import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 const AboutSection5Skeleton = () => {
-    return (
-        <div>
-            {/* Left-text right-image section */}
-            <div className="h-64 grid grid-rows-3 grid-flow gap-4">
-                <div className="">
-                    <h2></h2>
-                    <p></p>
-                   <div>
-                    <img src="" alt="" />
-                   </div>
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-
-
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-10">
+      {Array.from({ length: 6 }).map((_, index) => (
+        <div key={index} className="w-full h-64">
+          <Skeleton
+            height="100%"
+            borderRadius="0.5rem"
+            style={{ lineHeight: 2 }}
+          />
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
-export default AboutSection5Skeleton
+export default AboutSection5Skeleton;
