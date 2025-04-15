@@ -1,1 +1,5 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+a.active {
+  color: yellow;
+}

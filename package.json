@@ -3,8 +3,13 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@types/swiper": "^5.4.3",
+    "@vitejs/plugin-react": "^4.3.4",
     "@vitest/ui": "^3.1.1",
     "jsdom": "^26.0.0",
     "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "react-loading-skeleton": "^3.5.0"
   }
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace with your actual public key from the EmailJS dashboard
+            emailjs.init("BdjGouAMrgA5RBH-I");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // Replace 'service_qm0n90e' with your actual service ID
+                // Replace 'YOUR_TEMPLATE_ID' with your actual template ID
+                emailjs.sendForm('service_qm0n90e', 'template_7gd8hbo', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <form id="contact-form">
+        <input type="hidden" name="time" value="Mar 10 2025 08:46">
+        <label>Name</label>
+        <input type="text" name="name" required>
+        <label>Email</label>
+        <input type="email" name="email" required>
+        <label>Subject</label>
+        <input type="text" name="title" required>
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "BdjGouAMrgA5RBH-I",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_qm0n90e', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <form id="contact-form">
+         To simplify the tutorial, the value is static.
+        <input type="hidden" name="time" value="Mar 10 2025 08:46">
+        <label>Name</label>
+        <input type="text" name="name" required>
+        <label>Email</label>
+        <input type="email" name="email" required>
+        <label>Subject</label>
+        <input type="text" name="title" required>
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html> -->
