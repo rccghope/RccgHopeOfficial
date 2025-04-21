@@ -39,16 +39,24 @@ const ContactFormPage = () => {
       .then(() => {
         setStatus('Message sent successfully!');
         setFormData({
-          name: '',
+          firstName: '',
           lastName: '',
           phone: '',
           email: '',
           message: '',
         });
       })
-      .catch(error => {
-        setStatus(`Failed to send message: ${error.text}`);
+      .catch((error: unknown) => {
+        if (error instanceof Error) {
+          console.error('Error sending message:', error.message);
+        } else {
+          console.error('Unknown error sending message:', error);
+        }
+      
+        setStatus('Failed to send message. Please try again later.');
       });
+      
+      
   };
 
   return (
