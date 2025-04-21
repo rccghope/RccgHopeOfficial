@@ -1,5 +1,5 @@
 import { CiBank } from 'react-icons/ci';
-import { FaCcMastercard } from 'react-icons/fa';
+
 import { Link } from 'react-router-dom';
 const OnlineSection2 = () => {
   return (

@@ -1,16 +1,14 @@
-import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 const AboutSection1Skeleton = () => {
-    return (
-        <div>
-            {/* Little text after about us banner*/}
-            <div className="flex justify-center items-center text-bold">
-                <h5 className="text-bold"></h5>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <div className="flex justify-center items-center mt-7 w-auto px-4">
+        <Skeleton count={4} width={800} height={20} />
+      </div>
+    </div>
+  );
+};
 
-export default AboutSection1Skeleton
+export default AboutSection1Skeleton;
