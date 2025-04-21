@@ -1,23 +1,25 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const AboutSection2Skeleton = () => {
+const SkeletonAboutSection2 = () => {
   return (
-    <div className="mt-20 border-2 border-gray-300 rounded-xl p-4 md:p-10">
-      <div className="md:relative grid md:grid-cols-2 gap-6 items-center h-[40rem] md:h-[20rem]">
-        {/* Left text section skeleton */}
+    <div className="mt-20 rounded-xl p-6 md:p-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Text Skeleton */}
         <div className="space-y-4">
-          <Skeleton height={40} width={200} /> {/* Title */}
-          <Skeleton count={3} height={20} /> {/* Paragraphs */}
+          <Skeleton height={40} width="40%" />
+          <Skeleton count={1} height={20} />
+          <Skeleton count={1} height={20} width="85%" />
+          <Skeleton count={1} height={20} width="75%" />
         </div>
 
-        {/* Right image skeleton */}
+        {/* Image Skeleton */}
         <div>
-          <Skeleton height={300} className="w-full md:w-1/2 rounded-xl" />
+          <Skeleton height={300} className="md:h-[400px] w-full rounded-xl" />
         </div>
       </div>
     </div>
   );
 };
 
-export default AboutSection2Skeleton;
+export default SkeletonAboutSection2;
