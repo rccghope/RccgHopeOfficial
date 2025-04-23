@@ -9,6 +9,7 @@ import AboutSection4Skeleton from '../LazyLoad/AboutSection4Skeleton';
 import AboutSection5Skeleton from '../LazyLoad/AboutSection5Skeleton';
 import AboutSection6Skeleton from '../LazyLoad/AboutSection6Skeleton';
 import AboutSection7Skeleton from '../LazyLoad/AboutSection7Skeleton';
+// import ColorToggle from "./LazyLoad/ColorToggle"
 
 const AboutBanner = React.lazy(() => import('../components/AboutBanner'));
 const AboutSection1 = React.lazy(() => import('../components/AboutSection1'));
@@ -18,6 +19,7 @@ const AboutSection4 = React.lazy(() => import('../components/AboutSection4'));
 const AboutSection5 = React.lazy(() => import('../components/AboutSection5'));
 const AboutSection6 = React.lazy(() => import('../components/AboutSection6'));
 const AboutSection7 = React.lazy(() => import('../components/AboutSection7'));
+const ColorToggle = React.lazy(() => import('../components/ColorToggle'));
 
 const AboutUs = () => {
   return (
@@ -95,6 +97,15 @@ const AboutUs = () => {
         </ErrorBoundary>
       </div>
 
+    <div>
+      <ErrorBoundary>
+        {' '}
+        <Suspense fallback={<div>Loading</div>}>
+          <ColorToggle />
+        </Suspense>
+      </ErrorBoundary>
+      <div className=" px-4 md:px-20"></div>
+    </div>
     </div>
   );
 };
