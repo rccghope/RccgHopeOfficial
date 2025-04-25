@@ -39,16 +39,34 @@ const ContactFormPage = () => {
       .then(() => {
         setStatus('Message sent successfully!');
         setFormData({
+ features/add-dark-mode
           name: '',
+
+          firstName: '',
+main
           lastName: '',
           phone: '',
           email: '',
           message: '',
         });
       })
+ features/add-dark-mode
       .catch(error => {
         setStatus(`Failed to send message: ${error.text}`);
       });
+
+      .catch((error: unknown) => {
+        if (error instanceof Error) {
+          console.error('Error sending message:', error.message);
+        } else {
+          console.error('Unknown error sending message:', error);
+        }
+      
+        setStatus('Failed to send message. Please try again later.');
+      });
+      
+      
+ main
   };
 
   return (
@@ -135,7 +153,11 @@ const ContactFormPage = () => {
 
         <button
           type="submit"
+ features/add-dark-mode
           className="w-full bg-gray-700 text-white font-bold py-3 rounded-md hover:bg-gray-800 transition duration-300"
+
+          className="w-full bg-blue-700 text-white font-bold py-3 rounded-md hover:bg-gray-800 transition duration-300"
+ main
         >
           Send Message
         </button>

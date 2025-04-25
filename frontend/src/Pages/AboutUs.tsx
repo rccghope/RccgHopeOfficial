@@ -30,65 +30,44 @@ const AboutUs = () => {
           <AboutBanner />
         </Suspense>
       </ErrorBoundary>
-
-      <div className="">
+      <div className=" px-4 md:px-20">
+        {' '}
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection1Skeleton />}>
             <AboutSection1 />
           </Suspense>
         </ErrorBoundary>
-      </div>
-      
-      <div className="">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection2Skeleton />}>
             <AboutSection2 />
           </Suspense>
         </ErrorBoundary>
-      </div>
-      
-      <div className="">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection3Skeleton />}>
             <AboutSection3 />
           </Suspense>
         </ErrorBoundary>
-      </div>
-      
-      <div className="">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection4Skeleton />}>
             <AboutSection4 />
           </Suspense>
         </ErrorBoundary>
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
-      
-      <div className="">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection5Skeleton />}>
             <AboutSection5 />
           </Suspense>
         </ErrorBoundary>
-      </div>
-      
-      <div className="">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection6Skeleton />}>
             <AboutSection6 />
           </Suspense>
         </ErrorBoundary>
-      </div>
-      <div className="">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<AboutSection7Skeleton />}>
@@ -96,6 +75,7 @@ const AboutUs = () => {
           </Suspense>
         </ErrorBoundary>
       </div>
+ features/add-dark-mode
 
     <div>
       <ErrorBoundary>
@@ -106,6 +86,8 @@ const AboutUs = () => {
       </ErrorBoundary>
       <div className=" px-4 md:px-20"></div>
     </div>
+=======
+ main
     </div>
   );
 };

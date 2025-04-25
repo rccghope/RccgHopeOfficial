@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 const ContactBanner = React.lazy(() => import('../components/ContactBanner'));
 import ErrorBoundary from '../components/ErrorBoundary';
 import ContactBannerImageSkeleton from '../LazyLoad/ContactBannerSkeleton';
+import ContactFormSkeleton from '../LazyLoad/ContactFormSkeleton';
 const ContactForm = React.lazy(() => import('../components/ContactForm'));
 
 const ContactUs = () => {
@@ -16,7 +17,7 @@ const ContactUs = () => {
       </ErrorBoundary>
       <ErrorBoundary>
         {' '}
-        <Suspense fallback={<div>Loading</div>}>
+        <Suspense fallback={<ContactFormSkeleton />}>
           {' '}
           <ContactForm />
         </Suspense>

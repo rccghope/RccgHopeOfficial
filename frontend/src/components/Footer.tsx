@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaFacebookF } from 'react-icons/fa';
 import { IoLogoInstagram } from 'react-icons/io5';
-import { ReactElement } from 'react';
+import { ReactElement, FC } from 'react';
 
 interface NavItem {
   name: string;
@@ -9,12 +9,12 @@ interface NavItem {
 }
 
 interface SocialItem {
-  name: ReactElement;
+  icon: ReactElement;
   path: string;
 }
 
-const Footer = () => {
-  const nav: NavItem[] = [
+const Footer: FC = () => {
+  const navLinks: NavItem[] = [
     { name: 'Home', path: '/' },
     { name: 'ABOUT US', path: '/aboutus' },
     { name: 'CONTACT US', path: '/contact' },
@@ -22,51 +22,57 @@ const Footer = () => {
     { name: 'WATCH US', path: '/watch' },
   ];
 
-  const social: SocialItem[] = [
-    { name: <FaFacebookF />, path: '/' },
-    { name: <IoLogoInstagram />, path: '/' },
+  const socialLinks: SocialItem[] = [
+    { icon: <FaFacebookF />, path: '/' },
+    { icon: <IoLogoInstagram />, path: '/' },
   ];
 
   return (
-    <div className="bg-gray-200">
-      <div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4  px-4 md:px-20 py-10">
-          <div className="md:col-span-4 mb-20 md:mb-0">
-            <h1 className="font-bold text-2xl">RCCG House of Prayer</h1>
-          </div>
-          <div className="md:col-span-2 mb-10 md:mb-0">
-            <h1 className="font-bold mb-10">Visit us Today</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
-              sint suscipit nobis labore et quasi earum delectus, expedita quae
-              aliquam!
-            </p>
-          </div>
-          <div className="md:col-span-2 flex flex-col">
-            <h1 className="font-bold mb-10">Links</h1>
-            {nav.map((item, index) => (
-              <div key={index}>
-                <Link to={item.path}>{item.name}</Link>
-              </div>
+    <footer className="bg-gray-200">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 md:px-20 py-10">
+        {/* Branding */}
+        <div className="md:col-span-4 mb-10 md:mb-0">
+          <h1 className="font-bold text-2xl">RCCG House of Prayer</h1>
+        </div>
+
+        {/* Visit Info */}
+        <div className="md:col-span-2 mb-10 md:mb-0">
+          <h2 className="font-bold mb-4">Visit us Today</h2>
+          <p className="text-sm text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
+            sint suscipit nobis labore et quasi earum delectus, expedita quae
+            aliquam!
+          </p>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="md:col-span-2 flex flex-col space-y-2">
+          <h2 className="font-bold mb-4">Links</h2>
+          {navLinks.map((item) => (
+            <Link key={item.name} to={item.path} className="text-sm text-gray-700 hover:underline">
+              {item.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Social Media */}
+        <div className="md:col-span-4">
+          <h2 className="font-bold mb-4">Stay Updated - Follow Us</h2>
+          <div className="flex gap-5 text-xl text-gray-700">
+            {socialLinks.map((item, index) => (
+              <Link key={index} to={item.path} className="hover:text-blue-600">
+                {item.icon}
+              </Link>
             ))}
           </div>
-          <div className="md:col-span-4">
-            <h1 className="font-bold mb-10">Stay Updated - Follow Us</h1>
-            <div className="flex flex-row gap-5 mb-10">
-              {social.map((item, index) => (
-                <div key={index}>
-                  <Link to={item.path}>{item.name}</Link>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
-        <hr className="mt-20 text-gray-500 mx-3" />
-        <p className="text-center text-sm mt-2 text-gray-500 pb-5">
-          itae nemo quisquam ad illo quo sunt. Delectus.
-        </p>
       </div>
-    </div>
+
+      <hr className="mx-4 text-gray-300" />
+      <p className="text-center text-sm text-gray-500 py-4">
+        &copy; {new Date().getFullYear()} RCCG House of Prayer. All rights reserved.
+      </p>
+    </footer>
   );
 };
 
