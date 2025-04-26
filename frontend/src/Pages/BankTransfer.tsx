@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { useThemeStore } from '../store/themeStore'; // import the theme store
+import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore';
+ // import the theme store
 
 const BankTransfer = () => {
-  const mode = useThemeStore((state) => state.mode); // FIXED ✅
+  const { mode } = useThemeStore((state: ThemeState) => state); // FIXED ✅
 
   const [formData, setFormData] = useState({
     firstName: '',
