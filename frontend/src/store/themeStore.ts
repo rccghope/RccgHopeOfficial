@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-type ThemeState = {
+export type ThemeState = {
   mode: 'light' | 'dark';
   toggleMode: () => void;
 };
