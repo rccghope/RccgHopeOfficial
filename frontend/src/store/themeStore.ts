@@ -1,19 +1,21 @@
 import { create } from 'zustand';
 
+// First: Define the theme state type
 export type ThemeState = {
   mode: 'light' | 'dark';
   toggleMode: () => void;
 };
 
-const themeFromStorage = localStorage.getItem('theme') as 'light' | 'dark' | null;
+// Get initial mode from localStorage
+const themeFromStorage: 'light' | 'dark' | null = localStorage.getItem('theme') as 'light' | 'dark' | null;
 
-export const useThemeStore = create<ThemeState>()((set) => ({
+// Now create the store
+export const useThemeStore = create<ThemeState>((set) => ({
   mode: themeFromStorage === 'light' || themeFromStorage === 'dark' ? themeFromStorage : 'light',
-  toggleMode: () => {
-    set((state: ThemeState) => {
+  toggleMode: () =>
+    set((state) => {
       const newMode = state.mode === 'light' ? 'dark' : 'light';
       localStorage.setItem('theme', newMode);
       return { mode: newMode };
-    });
-  },
+    }),
 }));
