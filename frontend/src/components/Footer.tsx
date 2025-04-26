@@ -31,8 +31,10 @@ const Footer: FC = () => {
   ];
 
   return (
-    <footer className={`${mode === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 md:px-20 py-10">
+    <footer
+      className={`${mode === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 md:px-20 py-10">
         {/* Branding */}
         <div className="md:col-span-4 mb-10 md:mb-0">
           <h1 className="font-bold text-2xl">RCCG House of Prayer</h1>
@@ -65,7 +67,9 @@ const Footer: FC = () => {
         {/* Social Media */}
         <div className="md:col-span-4">
           <h2 className="font-bold mb-4">Stay Updated - Follow Us</h2>
-          <div className={`flex gap-5 text-xl ${mode === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+          <div
+            className={`flex gap-5 text-xl ${mode === 'light' ? 'text-gray-700' : 'text-gray-300'} flex-wrap justify-center md:justify-start`}
+          >
             {socialLinks.map((item, index) => (
               <Link key={index} to={item.path} className="hover:text-blue-400">
                 {item.icon}
@@ -76,7 +80,9 @@ const Footer: FC = () => {
       </div>
 
       <hr className={`${mode === 'light' ? 'text-gray-300' : 'text-gray-500'} mx-4`} />
-      <p className={`text-center text-sm py-4 ${mode === 'light' ? 'text-gray-500' : 'text-gray-300'}`}>
+      <p
+        className={`text-center text-sm py-4 ${mode === 'light' ? 'text-gray-500' : 'text-gray-300'}`}
+      >
         &copy; {new Date().getFullYear()} RCCG House of Prayer. All rights reserved.
       </p>
     </footer>

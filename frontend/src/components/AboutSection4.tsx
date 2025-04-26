@@ -2,12 +2,14 @@ import React from 'react';
 import img6 from '../assets/img6.jpg';
 
 const AboutSection4: React.FC = () => {
+  const backgroundStyle = {
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${img6})`,
+  };
+
   return (
     <div
       className="mt-20 bg-cover bg-center bg-no-repeat h-auto py-20 px-4 md:px-0 text-white"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${img6})`,
-      }}
+      style={backgroundStyle} // Using the backgroundStyle variable
     >
       <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12 text-center shadow-xl">
         <h4 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-6">OUR BELIEF</h4>

@@ -1,7 +1,13 @@
-import { useThemeStore } from '../store/themeStore'; // Make sure the path is correct
+import { useThemeStore } from '../store/themeStore'; 
 
-const AboutSection1 = () => {
-  const { mode } = useThemeStore((state) => state); // Retrieve the current theme mode
+
+interface ThemeState {
+  mode: 'light' | 'dark'; // Type mode to be either 'light' or 'dark'
+}
+
+const AboutSection1: React.FC = () => {
+
+  const { mode } = useThemeStore((state: ThemeState) => state); // Retrieve the current theme mode with the correct type
 
   return (
     <div>

@@ -1,8 +1,13 @@
 import { useThemeStore } from '../store/themeStore'; // Import the theme store
 import img6 from '../assets/img6.jpg';
 
+// Define the state type for the theme store
+interface ThemeState {
+  mode: 'light' | 'dark';
+}
+
 const AboutSection3 = () => {
-  const { mode } = useThemeStore((state) => state); // Get the current mode from the theme store
+  const { mode } = useThemeStore<ThemeState>((state) => state); // Get the current mode from the theme store with type
 
   return (
     <div

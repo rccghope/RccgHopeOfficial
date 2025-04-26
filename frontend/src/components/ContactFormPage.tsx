@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { useThemeStore } from '../store/themeStore'; // Assuming you have a theme store
+import { useThemeStore } from '../store/themeStore'; // Assuming a theme store
 
 const ContactFormPage: React.FC = () => {
   const { mode } = useThemeStore((state) => state); // Assuming a theme store that tracks dark/light mode
@@ -13,12 +13,13 @@ const ContactFormPage: React.FC = () => {
     message: '',
   });
   const [status, setStatus] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -29,13 +30,15 @@ const ContactFormPage: React.FC = () => {
 
     if (!formRef.current) return;
 
+    setLoading(true); // Start loading indicator
+
     emailjs
       .sendForm(
         'service_fgnjria',      // service ID 
         'template_kwyj2i9',     // template ID
         formRef.current,
         {
-          publicKey: '8aUqbtD1MX3g8QGJQ',  
+          publicKey: '8aUqbtD1MX3g8QGJQ',
         }
       )
       .then(() => {
@@ -47,6 +50,7 @@ const ContactFormPage: React.FC = () => {
           email: '',
           message: '',
         });
+        setLoading(false); // Stop loading indicator
       })
       .catch((error: unknown) => {
         if (error instanceof Error) {
@@ -54,8 +58,8 @@ const ContactFormPage: React.FC = () => {
         } else {
           console.error('Unknown error sending message:', error);
         }
-      
         setStatus('Failed to send message. Please try again later.');
+        setLoading(false); // Stop loading indicator
       });
   };
 
@@ -99,7 +103,7 @@ const ContactFormPage: React.FC = () => {
               value={formData.firstName}
               onChange={handleChange}
               required
-              className={`bg-white border ${
+              className={` border ${
                 mode === 'dark' ? 'border-gray-700' : 'border-gray-300'
               } rounded-md py-2 px-3 outline-none focus:ring-2 focus:ring-green-400`}
             />
@@ -120,7 +124,7 @@ const ContactFormPage: React.FC = () => {
               value={formData.lastName}
               onChange={handleChange}
               required
-              className={`bg-white border ${
+              className={` border ${
                 mode === 'dark' ? 'border-gray-700' : 'border-gray-300'
               } rounded-md py-2 px-3 outline-none focus:ring-2 focus:ring-green-400`}
             />
@@ -142,7 +146,7 @@ const ContactFormPage: React.FC = () => {
             type="tel"
             value={formData.phone}
             onChange={handleChange}
-            className={`bg-white border ${
+            className={` border ${
               mode === 'dark' ? 'border-gray-700' : 'border-gray-300'
             } rounded-md py-2 px-3 outline-none focus:ring-2 focus:ring-green-400`}
           />
@@ -164,7 +168,7 @@ const ContactFormPage: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className={`bg-white border ${
+            className={`border ${
               mode === 'dark' ? 'border-gray-700' : 'border-gray-300'
             } rounded-md py-2 px-3 outline-none focus:ring-2 focus:ring-green-400`}
           />
@@ -185,7 +189,7 @@ const ContactFormPage: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className={`bg-white border ${
+            className={` border ${
               mode === 'dark' ? 'border-gray-700' : 'border-gray-300'
             } rounded-md py-3 px-3 h-36 outline-none resize-none focus:ring-2 focus:ring-green-400`}
           ></textarea>
@@ -196,8 +200,9 @@ const ContactFormPage: React.FC = () => {
           className={`w-full ${
             mode === 'dark' ? 'bg-blue-600' : 'bg-blue-700'
           } text-white font-bold py-3 rounded-md hover:bg-gray-800 transition duration-300`}
+          disabled={loading} // Disable button while loading
         >
-          Send Message
+          {loading ? 'Sending...' : 'Send Message'}
         </button>
 
         {status && (

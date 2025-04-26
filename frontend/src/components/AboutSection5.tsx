@@ -21,8 +21,8 @@ const AboutSection5: React.FC = () => {
 
   return (
     <div
-      className={`mt-40 p-2  ${
-        mode === 'dark' ? ' text-white' : 'bg-white text-gray-800'
+      className={`mt-40 p-2 ${
+        mode === 'dark' ? 'text-white' : 'bg-white text-gray-800'
       }`} // Conditional background and text colors
     >
       <h2
