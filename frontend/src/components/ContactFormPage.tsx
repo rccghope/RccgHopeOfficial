@@ -3,7 +3,8 @@ import emailjs from '@emailjs/browser';
 import { useThemeStore } from '../store/themeStore'; // Assuming a theme store
 
 const ContactFormPage: React.FC = () => {
-  const { mode } = useThemeStore((state) => state); // Assuming a theme store that tracks dark/light mode
+  const mode = useThemeStore((state) => state.mode);
+ 
   const formRef = useRef<HTMLFormElement | null>(null);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -30,12 +31,12 @@ const ContactFormPage: React.FC = () => {
 
     if (!formRef.current) return;
 
-    setLoading(true); // Start loading indicator
+    setLoading(true); 
 
     emailjs
       .sendForm(
-        'service_fgnjria',      // service ID 
-        'template_kwyj2i9',     // template ID
+        'service_fgnjria',    
+        'template_kwyj2i9',    
         formRef.current,
         {
           publicKey: '8aUqbtD1MX3g8QGJQ',
@@ -50,7 +51,7 @@ const ContactFormPage: React.FC = () => {
           email: '',
           message: '',
         });
-        setLoading(false); // Stop loading indicator
+        setLoading(false); 
       })
       .catch((error: unknown) => {
         if (error instanceof Error) {
@@ -59,7 +60,7 @@ const ContactFormPage: React.FC = () => {
           console.error('Unknown error sending message:', error);
         }
         setStatus('Failed to send message. Please try again later.');
-        setLoading(false); // Stop loading indicator
+        setLoading(false); 
       });
   };
 
@@ -200,7 +201,7 @@ const ContactFormPage: React.FC = () => {
           className={`w-full ${
             mode === 'dark' ? 'bg-blue-600' : 'bg-blue-700'
           } text-white font-bold py-3 rounded-md hover:bg-gray-800 transition duration-300`}
-          disabled={loading} // Disable button while loading
+          disabled={loading}
         >
           {loading ? 'Sending...' : 'Send Message'}
         </button>

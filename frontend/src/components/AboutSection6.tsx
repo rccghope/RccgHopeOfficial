@@ -3,9 +3,10 @@ import { useThemeStore } from '../store/themeStore'; // Assuming a theme store i
 import img6 from '../assets/img6.jpg';
 
 const AboutSection6: React.FC = () => {
-  const { mode } = useThemeStore((state) => state); // Assuming you have a theme store that tracks dark/light mode
+  const mode = useThemeStore((state) => state.mode);
+ 
 
-  // Define a variable for the text color classes based on mode
+  
   const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-700';
   const titleColor = mode === 'dark' ? 'text-yellow-400' : 'text-yellow-500';
 

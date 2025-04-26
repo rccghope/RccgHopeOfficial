@@ -1,7 +1,8 @@
 import { useThemeStore } from '../store/themeStore'; 
 
 const WatchLiveBody = () => {
-  const { mode } = useThemeStore((state) => state); 
+  const mode = useThemeStore((state) => state.mode);
+
 
   return (
     <div

@@ -10,10 +10,10 @@ const themeFromStorage: 'light' | 'dark' | null = localStorage.getItem('theme') 
 export const useThemeStore = create<ThemeState>((set) => ({
   mode: themeFromStorage === 'light' || themeFromStorage === 'dark' ? themeFromStorage : 'light',  // Default to 'light' if not found in localStorage
   toggleMode: () => {
-    set((state: ThemeState) => { // Explicitly typing `state` as `ThemeState`
+    set((state) => {
       const newMode = state.mode === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', newMode); // Save new theme to localStorage
-      return { mode: newMode };
+      localStorage.setItem('theme', newMode);
+      return { mode: newMode }; // This is fine because we're updating only the `mode` field
     });
   },
 }));

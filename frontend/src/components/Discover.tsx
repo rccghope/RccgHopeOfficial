@@ -1,7 +1,8 @@
 import { useThemeStore } from '../store/themeStore'; 
 
 const Discover = () => {
-  const { mode } = useThemeStore((state) => state); 
+  const mode = useThemeStore((state) => state.mode);
+
   return (
     <div
       className={`${mode === 'light' ? 'bg-gray-500' : 'bg-blue-500'} w-full h-full grid grid-cols-1 md:grid-cols-12 gap-6 px-6 py-8 md:px-20 md:py-10 text-white`}

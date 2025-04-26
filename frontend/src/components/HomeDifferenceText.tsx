@@ -1,7 +1,8 @@
-import { useThemeStore } from '../store/themeStore'; // Ensure the path is correct
+import { useThemeStore } from '../store/themeStore'; 
 
 const HomeDifferenceText = () => {
-  const { mode } = useThemeStore((state) => state); // Retrieve the current theme mode from the store
+  const mode = useThemeStore((state) => state.mode);
+
 
   return (
     <div className={`mt-30 text-center ${mode === 'dark' ? 'text-white' : 'text-black'}`}>

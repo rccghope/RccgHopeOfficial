@@ -16,24 +16,46 @@ const beliefs: Belief[] = [
 ];
 
 const HomeBeliefText = () => {
-  const { mode } = useThemeStore((state) => state);
+  const mode = useThemeStore((state) => state.mode);
 
   return (
-    <div className={`${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen p-6`}>
+    <div
+      className={`${
+        mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'
+      } min-h-screen p-6`}
+    >
       <div>
-        <h1 className={`text-4xl font-bold ${mode === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+        <h1
+          className={`text-4xl font-bold ${
+            mode === 'dark' ? 'text-white' : 'text-gray-900'
+          }`}
+        >
           OUR BELIEFS
         </h1>
-        <p className={`mt-4 ${mode === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+        <p
+          className={`mt-4 ${
+            mode === 'dark' ? 'text-gray-400' : 'text-gray-600'
+          }`}
+        >
           Rooted in faith, we stand on the core teachings of Christ.
         </p>
         <div className="mt-10">
           {beliefs.map((belief) => (
             <div key={belief.id} className="flex items-start gap-4 mb-4">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${mode === 'dark' ? 'bg-gray-800' : 'bg-black'}`}>
+              <div
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                  mode === 'dark' ? 'bg-gray-800' : 'bg-black'
+                }`}
+              >
                 {belief.id}
               </div>
-              <p className={`text-lg ${mode === 'dark' ? 'text-gray-300' : 'text-gray-800'}`}>{belief.text}</p>
+              <p
+                className={`text-lg ${
+                  mode === 'dark' ? 'text-gray-300' : 'text-gray-800'
+                }`}
+              >
+                {belief.text}
+              </p>
             </div>
           ))}
           <div className="flex flex-col items-start">

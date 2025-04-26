@@ -41,7 +41,8 @@ const images: Image[] = [
   },
 ];
 const HomeConnectionImages = () => {
-  const { mode } = useThemeStore((state) => state);
+  const mode = useThemeStore((state) => state.mode);
+
   return (
     <div className={`grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-10 ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>
       {images.map((image) => (

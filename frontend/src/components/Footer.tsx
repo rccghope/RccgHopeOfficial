@@ -15,7 +15,8 @@ interface SocialItem {
 }
 
 const Footer: FC = () => {
-  const { mode } = useThemeStore((state) => state); // 🌓 Get current theme mode
+  const mode = useThemeStore((state) => state.mode);
+  
 
   const navLinks: NavItem[] = [
     { name: 'Home', path: '/' },

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useThemeStore } from '../store/themeStore'; // import the theme store
 
 const BankTransfer = () => {
-  const { mode } = useThemeStore((state) => state); // get the current mode
+  const mode = useThemeStore((state) => state.mode); // FIXED ✅
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -10,6 +10,9 @@ const BankTransfer = () => {
     amount: '',
     email: '',
   });
+
+  // ... rest of your code
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

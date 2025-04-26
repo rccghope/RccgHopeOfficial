@@ -1,5 +1,5 @@
 import React, { FC, Suspense } from 'react';
-import { useThemeStore } from '../store/themeStore'; // Make sure the path is correct
+import { useThemeStore } from '../store/themeStore'; 
 
 import ErrorBoundary from './ErrorBoundary';
 import HomeLeadPastorTextSkeleton from '../LazyLoad/HomeLeadPastorTextSkeleton';
@@ -9,7 +9,8 @@ const HomeLeadPastorImages = React.lazy(() => import('./HomeLeadPastorImages'));
 const HomeLeadPastorText = React.lazy(() => import('./HomeLeadPastorText'));
 
 const HomeLeadPastor: FC = () => {
-  const { mode } = useThemeStore((state) => state); // Retrieve the current theme mode from the store
+  const mode = useThemeStore((state) => state.mode);
+ 
 
   return (
     <div className={`${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-16`}>

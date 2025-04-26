@@ -16,7 +16,8 @@ const beliefs: Belief[] = [
 ];
 
 const HomeLeadPastorText = () => {
-  const { mode } = useThemeStore((state) => state); // Retrieve the current theme mode from the store
+  const mode = useThemeStore((state) => state.mode);
+ 
 
   return (
     <div className={`${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} p-4`}>

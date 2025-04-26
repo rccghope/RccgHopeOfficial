@@ -24,7 +24,8 @@ const can = [
 ];
 
 const HomeDifferenceImages = () => {
-  const { mode } = useThemeStore((state) => state); // Retrieve the current theme mode
+  const mode = useThemeStore((state) => state.mode);
+  
 
   return (
     <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-20 mb-20 ${mode === 'dark' ? 'text-white' : 'text-black'}`}>

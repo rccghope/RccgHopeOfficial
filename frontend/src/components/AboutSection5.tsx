@@ -17,7 +17,8 @@ const images: ImageItem[] = [
 ];
 
 const AboutSection5: React.FC = () => {
-  const { mode } = useThemeStore((state) => state); // Assuming you have a theme store that tracks dark/light mode
+  const mode = useThemeStore((state) => state.mode);
+ 
 
   return (
     <div

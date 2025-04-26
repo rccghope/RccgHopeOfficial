@@ -4,7 +4,8 @@ import Navbar from '../components/Navbar';
 import { useThemeStore } from '../store/themeStore';
 
 const RootLayout = () => {
-  const { mode } = useThemeStore((state) => state);
+  const mode = useThemeStore((state) => state.mode);
+
   return (
     <div className={`${mode === 'light' ? 'bg-white' : 'bg-black'}`}>
       <Navbar />

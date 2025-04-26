@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useThemeStore } from '../store/themeStore'; // Make sure the path is correct
+import { useThemeStore } from '../store/themeStore';
 
 interface Value {
   id: number;
@@ -16,7 +16,8 @@ const value: Value[] = [
 ];
 
 const HomeValueText = () => {
-  const { mode } = useThemeStore((state) => state); // Retrieve the current theme mode from the store
+  const mode = useThemeStore((state) => state.mode);
+
 
   return (
     <div className={`${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen p-6`}>
