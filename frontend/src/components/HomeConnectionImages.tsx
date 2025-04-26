@@ -1,3 +1,6 @@
+import { useThemeStore } from '../store/themeStore';
+
+
 interface Image {
   id: number;
   src: string;
@@ -38,8 +41,9 @@ const images: Image[] = [
   },
 ];
 const HomeConnectionImages = () => {
+  const { mode } = useThemeStore((state) => state);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-30">
+    <div className={`grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-10 ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>
       {images.map((image) => (
         <div key={image.id} className="relative group">
           <img
@@ -47,7 +51,7 @@ const HomeConnectionImages = () => {
             alt={image.alt}
             className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105"
           />
-          <h1 className="text-center font-bold mt-2 mb-4">{image.name}</h1>
+          <h1 className={`text-center font-bold mt-2 mb-4 ${mode === 'dark' ? 'text-white' : 'text-black'}`}>{image.name}</h1>
         </div>
       ))}
     </div>

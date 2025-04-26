@@ -1,6 +1,8 @@
+import { useThemeStore } from '../store/themeStore'; 
 const Discover = () => {
+  const { mode } = useThemeStore((state) => state); 
   return (
-    <div className="bg-gray-600 w-full h-full grid grid-cols-1 md:grid-cols-12 gap-4 px-10 py-10 md:px-20 text-white">
+    <div className={`${mode === 'light' ? 'bg-gray-500' : 'bg-blue-500'} w-full h-full grid grid-cols-1 md:grid-cols-12 gap-4 px-10 py-10 md:px-20 text-white`}>
       {/* Left side */}
       <div className="flex flex-col justify-center items-center md:items-start md:col-span-8 text-center md:text-left ">
         <h1 className="text-2xl md:text-2xl font-bold">
