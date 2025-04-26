@@ -1,10 +1,11 @@
 import { useThemeStore } from '../store/themeStore'; // Import the theme store
 import img6 from '../assets/img6.jpg';
+import type { ThemeState } from '../store/themeStore';
 
 
 
 const AboutSection2 = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
 
 
   return (

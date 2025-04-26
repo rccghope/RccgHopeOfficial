@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 interface Value {
   id: number;
@@ -16,7 +17,7 @@ const value: Value[] = [
 ];
 
 const HomeValueText = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
 
 
   return (

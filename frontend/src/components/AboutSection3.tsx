@@ -1,12 +1,11 @@
 import { useThemeStore } from '../store/themeStore'; // Import the theme store
 import img6 from '../assets/img6.jpg';
+import type { ThemeState } from '../store/themeStore';
 
 // Define the state type for the theme store
 
 const AboutSection3 = () => {
-  const mode = useThemeStore((state) => state.mode);
-  
-
+  const { mode } = useThemeStore((state: ThemeState) => state);
   return (
     <div
       className={`mt-20 rounded-xl p-6 md:p-10 ${

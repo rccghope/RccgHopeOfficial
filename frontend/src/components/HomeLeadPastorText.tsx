@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useThemeStore } from '../store/themeStore'; // Make sure the path is correct
+import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 interface Belief {
   id: number;
@@ -16,7 +17,7 @@ const beliefs: Belief[] = [
 ];
 
 const HomeLeadPastorText = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
  
 
   return (

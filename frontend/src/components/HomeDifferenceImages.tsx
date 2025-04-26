@@ -1,4 +1,5 @@
-import { useThemeStore } from '../store/themeStore'; // Ensure the path is correct
+import { useThemeStore } from '../store/themeStore'; 
+import type { ThemeState } from '../store/themeStore'; 
 
 const can = [
   {
@@ -24,7 +25,7 @@ const can = [
 ];
 
 const HomeDifferenceImages = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
   
 
   return (

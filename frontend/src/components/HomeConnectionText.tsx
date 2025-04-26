@@ -1,7 +1,8 @@
 import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 const HomeConnectionText = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
 
   return (
     <div

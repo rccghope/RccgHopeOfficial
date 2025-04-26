@@ -1,9 +1,10 @@
 import React from 'react';
 import { useThemeStore } from '../store/themeStore'; // Assuming a theme store is used
 import img6 from '../assets/img6.jpg';
+import type { ThemeState } from '../store/themeStore';
 
 const AboutSection6: React.FC = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
  
 
   

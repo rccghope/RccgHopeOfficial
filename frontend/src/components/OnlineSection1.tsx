@@ -1,8 +1,9 @@
 import { useThemeStore } from '../store/themeStore';
 import img6 from '../assets/img6.jpg';
+import type { ThemeState } from '../store/themeStore'; 
 
 const OnlineSection1 = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
 
   return (
     <div

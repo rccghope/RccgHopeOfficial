@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF } from 'react-icons/fa';
 import { IoLogoInstagram } from 'react-icons/io5';
 import { ReactElement, FC } from 'react';
-import { useThemeStore } from '../store/themeStore'; // 🌙 Theme store import
+import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 interface NavItem {
   name: string;
@@ -15,7 +16,7 @@ interface SocialItem {
 }
 
 const Footer: FC = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
   
 
   const navLinks: NavItem[] = [

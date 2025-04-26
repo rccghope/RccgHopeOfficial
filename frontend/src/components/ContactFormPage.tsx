@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { useThemeStore } from '../store/themeStore'; // Assuming a theme store
+import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 const ContactFormPage: React.FC = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
  
   const formRef = useRef<HTMLFormElement | null>(null);
   const [formData, setFormData] = useState({

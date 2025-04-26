@@ -4,7 +4,7 @@ import type { ThemeState } from '../store/themeStore';
  // import the theme store
 
 const BankTransfer = () => {
-  const { mode } = useThemeStore((state: ThemeState) => state); // FIXED ✅
+  const { mode } = useThemeStore((state: ThemeState) => state); 
 
   const [formData, setFormData] = useState({
     firstName: '',

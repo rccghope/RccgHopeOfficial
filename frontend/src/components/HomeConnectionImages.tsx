@@ -1,4 +1,5 @@
 import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 
 interface Image {
@@ -41,7 +42,8 @@ const images: Image[] = [
   },
 ];
 const HomeConnectionImages = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
+
 
   return (
     <div className={`grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-10 ${mode === 'dark' ? 'bg-black' : 'bg-white'}`}>

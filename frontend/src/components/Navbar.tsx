@@ -63,11 +63,16 @@ const Navbar = () => {
                 </NavLink>
               ),
             )}
-            <button onClick={toggleMode} className="rounded">
+            <button
+              onClick={toggleMode}
+              className={`p-2 mb-4 rounded-full ${
+                mode === 'light' ? 'bg-black' : 'bg-white'
+              }`}
+            >
               <img
                 src={mode === 'light' ? sun : moon}
                 alt="theme-toggle-icon"
-                className="w-8 h-8"
+                className="w-4 h-4"
               />
             </button>
           </div>
@@ -91,7 +96,7 @@ const Navbar = () => {
           <img
             src={mode === 'light' ? sun : moon}
             alt="theme-toggle-icon"
-            className="w-8 h-8"
+            className="w-4 h-4"
           />
         </button>
       </div>

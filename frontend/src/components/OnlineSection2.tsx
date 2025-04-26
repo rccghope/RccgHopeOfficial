@@ -1,10 +1,10 @@
 import { CiBank } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore'; 
 
 const OnlineSection2 = () => {
-  const mode = useThemeStore((state) => state.mode);
-
+  const { mode } = useThemeStore((state: ThemeState) => state);
   return (
     <div
       className={`${

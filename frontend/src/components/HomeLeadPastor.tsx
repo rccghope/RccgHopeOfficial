@@ -1,5 +1,6 @@
 import React, { FC, Suspense } from 'react';
 import { useThemeStore } from '../store/themeStore'; 
+import type { ThemeState } from '../store/themeStore'; 
 
 import ErrorBoundary from './ErrorBoundary';
 import HomeLeadPastorTextSkeleton from '../LazyLoad/HomeLeadPastorTextSkeleton';
@@ -9,7 +10,7 @@ const HomeLeadPastorImages = React.lazy(() => import('./HomeLeadPastorImages'));
 const HomeLeadPastorText = React.lazy(() => import('./HomeLeadPastorText'));
 
 const HomeLeadPastor: FC = () => {
-  const mode = useThemeStore((state) => state.mode);
+  const { mode } = useThemeStore((state: ThemeState) => state);
  
 
   return (
