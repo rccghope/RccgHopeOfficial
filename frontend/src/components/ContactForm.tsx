@@ -9,7 +9,7 @@ const ContactFormPage = React.lazy(() => import('./ContactFormPage'));
 
 const ContactForm = () => {
   return (
-    <div className="px-4 mt-20 md:px-20 mb-16 md:mt-60 lg:mt-50">
+    <div className="px-4 mt-20 md:px-20  md:mt-60 lg:mt-50 bg-[#1D1E7E] p-5">
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 mt-10 items-start">
         {/* Left - Form */}
 

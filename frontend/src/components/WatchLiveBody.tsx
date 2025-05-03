@@ -18,8 +18,8 @@ const WatchLiveBody = () => {
       >
         <div
           className={`py-4 px-8 font-bold text-[15px] ${
-            mode === 'light' ? 'bg-gray-300' : 'bg-gray-700'
-          } rounded-md shadow-md`}
+            mode === 'light' ? 'bg-[#1D1E4F] ' : 'bg-gray-700'
+          } rounded-md shadow-md`}  
         >
           <a
             href="https://youtube.com/@rccghoplagos?si=eyj3udjJlSJxNVEW"
@@ -27,7 +27,7 @@ const WatchLiveBody = () => {
             rel="noopener noreferrer"
           >
             <h1
-              className={`${mode === 'light' ? 'text-black' : 'text-white'}`}
+              className={`${mode === 'light' ? 'text-white' : 'text-white'}`}
             >
               Watch on YouTube
             </h1>
@@ -35,7 +35,7 @@ const WatchLiveBody = () => {
         </div>
         <div
           className={`py-4 px-8 font-bold text-[15px] ${
-            mode === 'light' ? 'bg-gray-300' : 'bg-gray-700'
+            mode === 'light' ? 'bg-[#1D1E4F] ' : 'bg-gray-700'
           } rounded-md shadow-md`}
         >
           <a
@@ -44,7 +44,7 @@ const WatchLiveBody = () => {
             rel="noopener noreferrer"
           >
             <h1
-              className={`${mode === 'light' ? 'text-black' : 'text-white'}`}
+              className={`${mode === 'light' ? 'text-white' : 'text-white'}`}
             >
               Listen via Mixlr
             </h1>

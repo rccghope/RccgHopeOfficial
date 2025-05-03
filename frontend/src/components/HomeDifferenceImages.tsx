@@ -4,22 +4,22 @@ import type { ThemeState } from '../store/themeStore';
 const can = [
   {
     id: 1,
-    text: 'Volunteer',
+    text: 'Volunteer Opportunities',
     img: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1pbmlzdHJ5fGdvbGR8ZW58MHx8fHwxNjg3NTY5NzA0&ixlib=rb-4.0.3&q=80&w=1080',
   },
   {
     id: 2,
-    text: 'Donate',
+    text: 'Fundraising initiatives',
     img: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1pbmlzdHJ5fGdvbGR8ZW58MHx8fHwxNjg3NTY5NzA0&ixlib=rb-4.0.3&q=80&w=1080',
   },
   {
     id: 3,
-    text: 'Participate',
+    text: 'Donating Resources',
     img: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1pbmlzdHJ5fGdvbGR8ZW58MHx8fHwxNjg3NTY5NzA0&ixlib=rb-4.0.3&q=80&w=1080',
   },
   {
     id: 4,
-    text: 'Connect',
+    text: 'Advocacy and Awareness Campaigns',
     img: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1pbmlzdHJ5fGdvbGR8ZW58MHx8fHwxNjg3NTY5NzA0&ixlib=rb-4.0.3&q=80&w=1080',
   },
 ];

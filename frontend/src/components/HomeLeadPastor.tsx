@@ -1,6 +1,6 @@
 import React, { FC, Suspense } from 'react';
-import { useThemeStore } from '../store/themeStore'; 
-import type { ThemeState } from '../store/themeStore'; 
+import { useThemeStore } from '../store/themeStore';
+import type { ThemeState } from '../store/themeStore';
 
 import ErrorBoundary from './ErrorBoundary';
 import HomeLeadPastorTextSkeleton from '../LazyLoad/HomeLeadPastorTextSkeleton';
@@ -11,11 +11,19 @@ const HomeLeadPastorText = React.lazy(() => import('./HomeLeadPastorText'));
 
 const HomeLeadPastor: FC = () => {
   const { mode } = useThemeStore((state: ThemeState) => state);
- 
 
   return (
-    <div className={`${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-16`}>
-      <h1 className={`text-4xl font-bold text-center mb-10 mt-10 ${mode === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+    <div
+      className={`${
+        mode === 'dark' ? 'bg-black ' : 'bg-[#A3B7DC]'
+
+      } min-h-screen py-16 px-4 md:px-20`}
+    >
+      <h1
+        className={`text-4xl font-bold text-center mb-10 mt-10 ${
+          mode === 'dark' ? 'text-white' : 'text-gray-900'
+        }`}
+      >
         MEET OUR LEAD PASTOR
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-20 py-16 items-center">

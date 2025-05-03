@@ -30,7 +30,7 @@ const Navbar = () => {
             ? mode === 'light'
               ? 'bg-white'
               : 'bg-gray-900'
-            : 'bg-transparent'
+            : 'bg-transparent text-white'
         }`}
       >
         <div className="flex flex-row justify-between px-4 md:px-15 py-2 md:py-5">
@@ -42,13 +42,13 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="flex-row gap-8 mt-10 font-bold hidden md:flex">
-            {['/', '/aboutus', '/contact', '/online', '/watch'].map(
+            {['/', '/aboutus', '/contact', '/online', '/watch', '/blog'].map(
               (path, i) => (
                 <NavLink
                   key={i}
                   to={path}
                   className={`${
-                    mode === 'light' ? 'text-black' : 'text-white'
+                    mode === 'light' ? '' : 'text-white'
                   }`}
                 >
                   {
@@ -58,6 +58,7 @@ const Navbar = () => {
                       'CONTACT US',
                       'ONLINE GIVING',
                       'WATCH LIVE',
+                      'BLOG',
                     ][i]
                   }
                 </NavLink>
@@ -134,26 +135,29 @@ const Navbar = () => {
             </button>
           </div>
 
-          {['/', '/aboutus', '/contact', '/online', '/watch'].map((path, i) => (
-            <NavLink
-              key={i}
-              to={path}
-              className={`mb-4 text-lg font-semibold  ${
-                mode === 'light' ? 'text-black' : 'text-white'
-              }`}
-              onClick={toggleMenu}
-            >
-              {
-                [
-                  'HOME',
-                  'ABOUT US',
-                  'CONTACT US',
-                  'ONLINE GIVING',
-                  'WATCH LIVE',
-                ][i]
-              }
-            </NavLink>
-          ))}
+          {['/', '/aboutus', '/contact', '/online', '/watch', '/BLOG'].map(
+            (path, i) => (
+              <NavLink
+                key={i}
+                to={path}
+                className={`mb-4 text-lg font-semibold  ${
+                  mode === 'light' ? 'text-black' : 'text-white'
+                }`}
+                onClick={toggleMenu}
+              >
+                {
+                  [
+                    'HOME',
+                    'ABOUT US',
+                    'CONTACT US',
+                    'ONLINE GIVING',
+                    'WATCH LIVE',
+                    'BLOG',
+                  ][i]
+                }
+              </NavLink>
+            ),
+          )}
         </div>
       </div>
     </>

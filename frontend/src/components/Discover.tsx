@@ -6,7 +6,7 @@ const Discover = () => {
 
   return (
     <div
-      className={`${mode === 'light' ? 'bg-gray-500' : 'bg-blue-500'} w-full h-full grid grid-cols-1 md:grid-cols-12 gap-6 px-6 py-8 md:px-20 md:py-10 text-white`}
+      className={`${mode === 'light' ? 'bg-[#1D1E4F]' : 'bg-blue-500'} w-full h-full grid grid-cols-1 md:grid-cols-12 gap-6 px-6 py-8 md:px-20 md:py-10 text-white`}
     >
       {/* Left side */}
       <div className="flex flex-col justify-center items-center md:items-start md:col-span-8 text-center md:text-left">

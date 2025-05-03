@@ -19,13 +19,15 @@ const OnlineGiving = () => {
         </Suspense>
       </ErrorBoundary>
 
-      <div className=" px-4 md:px-20">
+      <div className=" ">
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<OnlineSection1Skeleton />}>
             <OnlineSection1 />
           </Suspense>
         </ErrorBoundary>
+      </div>
+      <div>
         <ErrorBoundary>
           {' '}
           <Suspense fallback={<OnlineSection2Skeleton />}>

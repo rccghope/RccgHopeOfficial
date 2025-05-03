@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
+import { FaVideo } from 'react-icons/fa';
 interface Slide {
   id: number;
   title: string;
@@ -72,10 +73,13 @@ const Slider: FC = () => {
               <p className=" md:text-2xl ">{slide.subtitle2}</p>
               <div className="flex flex-row md:flex-row gap-2 mt-6">
                 {' '}
-                <button className="mt-6 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
-                  Join Live
+                <button className="flex justify-center items-center mt-6 px-6 py-3 bg-black font-bold uppercase text-white border-2 border-white hover:bg-gray-800 transition">
+                  <span className='mr-2'>
+                    <FaVideo />
+                  </span>
+                  <span>Join Live</span>
                 </button>{' '}
-                <button className="mt-6 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
+                <button className="mt-6 px-6 py-3 bg-black text-white border-2 border-white font-bold uppercase hover:bg-gray-800 transition">
                   Get Involved
                 </button>
               </div>
@@ -83,7 +87,6 @@ const Slider: FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-     
     </div>
   );
 };

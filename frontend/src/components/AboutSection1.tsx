@@ -12,7 +12,7 @@ const AboutSection1: React.FC = () => {
   return (
     <div>
       <div
-        className={`flex justify-center items-center text-bold mt-7 w-auto ${
+        className={`flex justify-center items-center text-bold mt-7 w-auto px-4 md:px-20 ${
           mode === 'dark' ? 'text-white' : 'text-black'
         }`}
       >

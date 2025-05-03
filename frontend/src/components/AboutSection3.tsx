@@ -8,7 +8,7 @@ const AboutSection3 = () => {
   const { mode } = useThemeStore((state: ThemeState) => state);
   return (
     <div
-      className={`mt-20 rounded-xl p-6 md:p-10 ${
+      className={`mt-20 rounded-xl p-6 md:p-10 px-4 md:px-20 ${
         mode === 'dark' ? '' : 'bg-white'
       }`} 
     >

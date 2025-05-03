@@ -28,7 +28,7 @@ const AboutUs = () => {
           <AboutBanner />
         </Suspense>
       </ErrorBoundary>
-      <div className=" px-4 md:px-20">
+      <div className=" ">
         {' '}
         <ErrorBoundary>
           {' '}

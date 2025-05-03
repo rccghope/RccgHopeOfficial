@@ -1,6 +1,6 @@
 import React from 'react';
 import { useThemeStore } from '../store/themeStore'; // Assuming a theme store is used
-import img6 from '../assets/img6.jpg';
+import img33 from '../assets/img33.jpg';
 import type { ThemeState } from '../store/themeStore';
 
 const AboutSection6: React.FC = () => {
@@ -12,7 +12,7 @@ const AboutSection6: React.FC = () => {
   const titleColor = mode === 'dark' ? 'text-yellow-400' : 'text-yellow-500';
 
   return (
-    <div className={`mt-20 p-2 ${mode === 'dark' ? ' text-white' : 'bg-white text-gray-800'}`}>
+    <div className={`mt-20 p-2 px-4 md:px-20 ${mode === 'dark' ? ' text-white' : 'bg-white text-gray-800'}`}>
       <h1 className={`text-5xl font-bold text-center mb-10 ${titleColor}`}>
         Our Story
       </h1>
@@ -20,7 +20,7 @@ const AboutSection6: React.FC = () => {
         {/* Tall image by the left */}
         <div>
           <img
-            src={img6}
+            src={img33}
             alt="Our Story"
             className="w-full h-[30rem] object-cover rounded-lg shadow-md"
           />

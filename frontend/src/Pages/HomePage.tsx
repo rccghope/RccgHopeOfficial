@@ -44,7 +44,7 @@ const HomePage = () => {
           <Discover />
         </Suspense>
       </ErrorBoundary>
-      <div className=" px-4 md:px-20">
+      <div className=" ">
         <HomeValue />
         <HomeLeadPastor />
       </div>

@@ -23,8 +23,8 @@ const AboutSection5: React.FC = () => {
 
   return (
     <div
-      className={`mt-40 p-2 ${
-        mode === 'dark' ? 'text-white' : 'bg-white text-gray-800'
+      className={`mt-40 p-2 px-4 md:px-20 py-20 ${
+        mode === 'dark' ? 'text-white' : 'bg-[#A3B7DC] text-gray-800'
       }`} // Conditional background and text colors
     >
       <h2
@@ -44,7 +44,7 @@ const AboutSection5: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Left tall image */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 md:py-10">
           <img
             src={img6}
             alt="Main leadership"
@@ -54,7 +54,7 @@ const AboutSection5: React.FC = () => {
 
         {/* Right grid of 6 images */}
         <div className="md:col-span-9">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:py-10">
             {images.map((img) => (
               <div key={img.id}>
                 <img

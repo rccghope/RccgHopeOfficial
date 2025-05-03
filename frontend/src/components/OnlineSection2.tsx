@@ -1,7 +1,7 @@
-import { CiBank } from 'react-icons/ci';
+
 import { Link } from 'react-router-dom';
 import { useThemeStore } from '../store/themeStore';
-import type { ThemeState } from '../store/themeStore'; 
+import type { ThemeState } from '../store/themeStore';
 
 const OnlineSection2 = () => {
   const { mode } = useThemeStore((state: ThemeState) => state);
@@ -19,12 +19,42 @@ const OnlineSection2 = () => {
         >
           How You Give
         </h1>
+
         <p
           className={`mt-5 text-2xl text-center font-semibold ${
             mode === 'light' ? 'text-black' : 'text-white'
           }`}
         >
-          Choose the method that is most convenient for you:
+          For your tithes and offerings, kindly transfer to the account below:
+        </p>
+        <p
+          className={`mt-5  text-center  ${
+            mode === 'light' ? 'text-black' : 'text-white'
+          }`}
+        >
+          Account Name: [Church Name]
+        </p>
+        <p
+          className={`mt-5  text-center  ${
+            mode === 'light' ? 'text-black' : 'text-white'
+          }`}
+        >
+          Bank: [Bank Name]
+        </p>
+        <p
+          className={`mt-5  text-center  ${
+            mode === 'light' ? 'text-black' : 'text-white'
+          }`}
+        >
+          Account Number: [0000000000]
+        </p>
+        <p
+          className={`mt-5  text-center text-[20px] font-semibold italic  ${
+            mode === 'light' ? 'text-black' : 'text-white'
+          }`}
+        >
+          Click the button to give to missions, building fund, or other special
+          causes.
         </p>
       </div>
 
@@ -36,17 +66,12 @@ const OnlineSection2 = () => {
                 mode === 'light' ? 'bg-gray-300' : 'bg-gray-700'
               } flex flex-col justify-center items-center py-5 px-10 rounded-lg shadow-md`}
             >
-              <CiBank
-                className={`text-2xl ${
-                  mode === 'light' ? 'text-black' : 'text-white'
-                }`}
-              />
               <h1
-                className={`md:text-2xl mt-5 font-bold text-center ${
+                className={`md:text-2xl font-bold text-center ${
                   mode === 'light' ? 'text-black' : 'text-white'
                 }`}
               >
-                Bank Transfer
+                Make Donation
               </h1>
             </div>
           </Link>

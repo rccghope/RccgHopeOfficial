@@ -68,19 +68,19 @@ const ContactFormPage: React.FC = () => {
   return (
     <div
       className={`${
-        mode === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'
+        mode === 'dark' ? 'bg-gray-900 text-white' : ' text-gray-800'
       } p-6 rounded-md shadow-md`}
     >
       <h1
         className={`text-3xl font-bold mb-2 ${
-          mode === 'dark' ? 'text-yellow-400' : 'text-yellow-600'
+          mode === 'dark' ? 'text-white' : 'text-white'
         }`}
       >
         Send Us a Message
       </h1>
       <p
         className={`text-gray-600 mb-6 ${
-          mode === 'dark' ? 'text-gray-300' : 'text-gray-600'
+          mode === 'dark' ? 'text-white' : 'text-white'
         }`}
       >
         We're here to help. Fill out the form below and we'll get back to you as
@@ -93,7 +93,7 @@ const ContactFormPage: React.FC = () => {
             <label
               htmlFor="firstName"
               className={`text-sm font-semibold ${
-                mode === 'dark' ? 'text-gray-200' : 'text-gray-700'
+                mode === 'dark' ? 'text-white' : 'text-white'
               }`}
             >
               First Name
@@ -114,7 +114,7 @@ const ContactFormPage: React.FC = () => {
             <label
               htmlFor="lastName"
               className={`text-sm font-semibold ${
-                mode === 'dark' ? 'text-gray-200' : 'text-gray-700'
+                mode === 'dark' ? 'text-white' : 'text-white'
               }`}
             >
               Last Name
@@ -137,7 +137,7 @@ const ContactFormPage: React.FC = () => {
           <label
             htmlFor="phone"
             className={`text-sm font-semibold ${
-              mode === 'dark' ? 'text-gray-200' : 'text-gray-700'
+              mode === 'dark' ? 'text-white' : 'text-white'
             }`}
           >
             Phone Number
@@ -158,7 +158,7 @@ const ContactFormPage: React.FC = () => {
           <label
             htmlFor="email"
             className={`text-sm font-semibold ${
-              mode === 'dark' ? 'text-gray-200' : 'text-gray-700'
+              mode === 'dark' ? 'text-white' : 'text-white'
             }`}
           >
             Email
@@ -171,7 +171,7 @@ const ContactFormPage: React.FC = () => {
             onChange={handleChange}
             required
             className={`border ${
-              mode === 'dark' ? 'border-gray-700' : 'border-gray-300'
+              mode === 'dark' ? 'border-white' : 'border-white'
             } rounded-md py-2 px-3 outline-none focus:ring-2 focus:ring-green-400`}
           />
         </div>
@@ -180,7 +180,7 @@ const ContactFormPage: React.FC = () => {
           <label
             htmlFor="message"
             className={`text-sm font-semibold ${
-              mode === 'dark' ? 'text-gray-200' : 'text-gray-700'
+              mode === 'dark' ? 'text-white' : 'text-white'
             }`}
           >
             Message
@@ -200,7 +200,7 @@ const ContactFormPage: React.FC = () => {
         <button
           type="submit"
           className={`w-full ${
-            mode === 'dark' ? 'bg-blue-600' : 'bg-blue-700'
+            mode === 'dark' ? 'bg-[#59D478]' : 'bg-[#59D478]'
           } text-white font-bold py-3 rounded-md hover:bg-gray-800 transition duration-300`}
           disabled={loading}
         >
