@@ -15,7 +15,7 @@ const images: ImageItem[] = [
 
 const HomeSection1: React.FC = () => {
   return (
-    <div className="mt-10 w-full h-96 flex flex-col lg:flex-row items-center justify-center gap-4">
+    <div className="mt-10 w-full  flex flex-col lg:flex-row items-center justify-center gap-4">
       {images.map(({ id, img }) => (
         <div key={id} className="w-full lg:w-1/3 h-56 bg-gray-300">
           <img src={img} alt={`Image ${id}`} className="w-full h-full object-cover" />
