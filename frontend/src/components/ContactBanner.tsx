@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import img3 from '../assets/img3.jpg';
+
 import img25 from '../assets/img25.jpg';
 
 import ErrorBoundary from './ErrorBoundary';
